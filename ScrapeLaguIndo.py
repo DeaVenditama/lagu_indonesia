@@ -57,11 +57,10 @@ class Scrape:
         return "\n".join(lyricText)
 
     def crawl(self):
-        #abjad = "a bc d e f g h i j k l m n o p q r s t u v w x y num"
-        #abjad_list = abjad.split()
-        #for word in abjad_list:
-        #    self.getSongList(word)
-        self.getSongList('num')
+        abjad = "a bc d e f g h i j k l m n o p q r s t u v w x y num"
+        abjad_list = abjad.split()
+        for word in abjad_list:
+            self.getSongList(word)
         self.driver.quit()
 
 scrape = Scrape().crawl()
